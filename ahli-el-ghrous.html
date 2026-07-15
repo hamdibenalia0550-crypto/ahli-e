@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>نادي أهلي الغروس | AHLI EL GHROUS CLUB</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.7/babel.min.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500;600;700;800&family=Almarai:wght@400;700;800&display=swap');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #000; color: #fff; direction: rtl; -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; color: inherit; background: transparent; border: none; margin: 0; }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+::placeholder { color: #6b6b6b; }
+select { -webkit-appearance: none; appearance: none; }
+
+
+.divide-y > :not([hidden]) ~ :not([hidden]) { border-top-width: 1px; border-top-style: solid; }
+.divide-neutral-900 > :not([hidden]) ~ :not([hidden]) { border-color: #171717; }
+.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
+.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+.space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+
+.-left-24{left:-6rem;}
+.-right-32{right:-8rem;}
+.-top-24{top:-6rem;}
+.-top-32{top:-8rem;}
+.-translate-x-1\/2{transform:translateX(-50%);}
+.absolute{position:absolute;}
+.aspect-\[3\/2\]{aspect-ratio:3 / 2;}
+.backdrop-blur{backdrop-filter:blur(8px);}
+.bg-black{background-color:#000000;}
+.bg-black\/70{background-color:rgba(0,0,0,0.7);}
+.bg-black\/90{background-color:rgba(0,0,0,0.9);}
+.bg-emerald-500\/15{background-color:rgba(16,185,129,0.15);}
+.bg-emerald-600{background-color:#059669;}
+.bg-gradient-to-l{background-image:linear-gradient(to left, var(--tw-from,#000), var(--tw-to,#000));}
+.bg-neutral-400\/10{background-color:rgba(163,163,163,0.1);}
+.bg-neutral-500\/10{background-color:rgba(115,115,115,0.1);}
+.bg-neutral-800{background-color:#262626;}
+.bg-neutral-900{background-color:#171717;}
+.bg-neutral-900\/60{background-color:rgba(23,23,23,0.6);}
+.bg-neutral-950{background-color:#0a0a0a;}
+.bg-neutral-950\/70{background-color:rgba(10,10,10,0.7);}
+.bg-red-600{background-color:#dc2626;}
+.bg-red-600\/20{background-color:rgba(220,38,38,0.2);}
+.bg-red-600\/30{background-color:rgba(220,38,38,0.3);}
+.bg-red-700\/20{background-color:rgba(185,28,28,0.2);}
+.bg-red-700\/25{background-color:rgba(185,28,28,0.25);}
+.bg-yellow-500\/10{background-color:rgba(234,179,8,0.1);}
+.block{display:block;}
+.blur-2xl{filter:blur(40px);}
+.blur-\[100px\]{filter:blur(100px);}
+.blur-\[110px\]{filter:blur(110px);}
+.blur-\[90px\]{filter:blur(90px);}
+.border{border-width:1px;border-style:solid;border-color:#262626;}
+.border-2{border-width:2px;border-style:solid;}
+.border-b{border-bottom-width:1px;border-bottom-style:solid;}
+.border-l{border-left-width:1px;border-left-style:solid;}
+.border-neutral-800{border-color:#262626;}
+.border-neutral-900{border-color:#171717;}
+.border-red-600{border-color:#dc2626;}
+.border-t{border-top-width:1px;border-top-style:solid;}
+.border-t-transparent{border-top-color:transparent;}
+.bottom-6{bottom:1.5rem;}
+.col-span-full{grid-column:1/-1;}
+.duration-500{transition-duration:.5s;}
+.fixed{position:fixed;}
+.flex{display:flex;}
+.flex-1{flex:1 1 0%;}
+.flex-col{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+.focus\:ring-red-600\/50:focus{--tw-ring-color:rgba(220,38,38,0.5);}
+.font-almarai{font-family:'Almarai',sans-serif;}
+.font-bold{font-weight:700;}
+.font-changa{font-family:'Changa',sans-serif;}
+.font-extrabold{font-weight:800;}
+.from-red-700{--tw-from:#b91c1c;}
+.gap-1{gap:0.25rem;}
+.gap-1\.5{gap:0.375rem;}
+.gap-10{gap:2.5rem;}
+.gap-2{gap:0.5rem;}
+.gap-3{gap:0.75rem;}
+.gap-4{gap:1rem;}
+.gap-5{gap:1.25rem;}
+.gap-6{gap:1.5rem;}
+.gap-x-6{column-gap:1.5rem;}
+.gap-y-3{row-gap:0.75rem;}
+.grid{display:grid;}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.h-10{height:2.5rem;}
+.h-12{height:3rem;}
+.h-20{height:5rem;}
+.h-3{height:0.75rem;}
+.h-3\.5{height:0.875rem;}
+.h-4{height:1rem;}
+.h-5{height:1.25rem;}
+.h-6{height:1.5rem;}
+.h-9{height:2.25rem;}
+.h-\[380px\]{height:380px;}
+.h-\[420px\]{height:420px;}
+.h-\[500px\]{height:500px;}
+.h-\[600px\]{height:600px;}
+.h-fit{height:fit-content;}
+.h-full{height:100%;}
+.h-px{height:1px;}
+.hidden{display:none;}
+.hover\:bg-emerald-500:hover{background-color:#10b981;}
+.hover\:bg-neutral-700:hover{background-color:#404040;}
+.hover\:bg-neutral-900:hover{background-color:#171717;}
+.hover\:bg-neutral-900\/40:hover{background-color:rgba(23,23,23,0.4);}
+.hover\:bg-red-500:hover{background-color:#ef4444;}
+.hover\:bg-red-600:hover{background-color:#dc2626;}
+.hover\:bg-red-600\/10:hover{background-color:rgba(220,38,38,0.1);}
+.hover\:bg-red-600\/30:hover{background-color:rgba(220,38,38,0.3);}
+.hover\:border-red-600:hover{border-color:#dc2626;}
+.hover\:border-red-600\/60:hover{border-color:rgba(220,38,38,0.6);}
+.hover\:from-red-600:hover{--tw-from:#dc2626;}
+.hover\:text-red-500:hover{color:#ef4444;}
+.hover\:text-white:hover{color:#ffffff;}
+.hover\:to-red-500:hover{--tw-to:#ef4444;}
+.inset-0{top:0;right:0;bottom:0;left:0;}
+.items-center{align-items:center;}
+.justify-between{justify-content:space-between;}
+.justify-center{justify-content:center;}
+.justify-end{justify-content:flex-end;}
+.leading-none{line-height:1;}
+.leading-tight{line-height:1.25;}
+.left-1\/2{left:50%;}
+.left-1\/3{left:33.333%;}
+@media (min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.max-h-\[85vh\]{max-height:85vh;}
+.max-w-2xl{max-width:42rem;}
+.max-w-6xl{max-width:72rem;}
+.max-w-lg{max-width:32rem;}
+.max-w-sm{max-width:24rem;}
+.mb-1{margin-bottom:0.25rem;}
+.mb-1\.5{margin-bottom:0.375rem;}
+.mb-10{margin-bottom:2.5rem;}
+.mb-2{margin-bottom:0.5rem;}
+.mb-3{margin-bottom:0.75rem;}
+.mb-4{margin-bottom:1rem;}
+.mb-5{margin-bottom:1.25rem;}
+.mb-6{margin-bottom:1.5rem;}
+.mb-8{margin-bottom:2rem;}
+@media (min-width:768px){.md\:flex{display:flex;}}
+@media (min-width:768px){.md\:hidden{display:none;}}
+@media (min-width:768px){.md\:order-3{order:3;}}
+.min-h-\[calc\(100vh-5rem\)\]{min-height:calc(100vh - 5rem);}
+.min-h-screen{min-height:100vh;}
+.min-w-0{min-width:0;}
+.min-w-\[800px\]{min-width:800px;}
+.min-w-\[900px\]{min-width:900px;}
+.mt-1{margin-top:0.25rem;}
+.mt-2{margin-top:0.5rem;}
+.mt-3{margin-top:0.75rem;}
+.mt-4{margin-top:1rem;}
+.mt-8{margin-top:2rem;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.object-cover{object-fit:cover;}
+.opacity-40{opacity:0.4;}
+.opacity-\[0\.06\]{opacity:0.06;}
+.opacity-\[0\.07\]{opacity:0.07;}
+.order-1{order:1;}
+.order-2{order:2;}
+.order-4{order:4;}
+.overflow-hidden{overflow:hidden;}
+.overflow-x-auto{overflow-x:auto;}
+.overflow-y-auto{overflow-y:auto;}
+.p-2{padding:0.5rem;}
+.p-3{padding:0.75rem;}
+.p-4{padding:1rem;}
+.p-5{padding:1.25rem;}
+.p-6{padding:1.5rem;}
+.p-8{padding:2rem;}
+.pointer-events-none{pointer-events:none;}
+.pt-1{padding-top:0.25rem;}
+.pt-2{padding-top:0.5rem;}
+.pt-3{padding-top:0.75rem;}
+.pt-6{padding-top:1.5rem;}
+.px-2{padding-left:0.5rem;padding-right:0.5rem;}
+.px-3{padding-left:0.75rem;padding-right:0.75rem;}
+.px-4{padding-left:1rem;padding-right:1rem;}
+.px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.px-6{padding-left:1.5rem;padding-right:1.5rem;}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
+.py-12{padding-top:3rem;padding-bottom:3rem;}
+.py-14{padding-top:3.5rem;padding-bottom:3.5rem;}
+.py-16{padding-top:4rem;padding-bottom:4rem;}
+.py-2{padding-top:0.5rem;padding-bottom:0.5rem;}
+.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem;}
+.py-20{padding-top:5rem;padding-bottom:5rem;}
+.py-24{padding-top:6rem;padding-bottom:6rem;}
+.py-3{padding-top:0.75rem;padding-bottom:0.75rem;}
+.py-4{padding-top:1rem;padding-bottom:1rem;}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem;}
+.relative{position:relative;}
+.right-1\/4{right:25%;}
+.ring-1{box-shadow:0 0 0 1px var(--tw-ring-color, rgba(255,255,255,.1));}
+.ring-emerald-500\/40{--tw-ring-color:rgba(16,185,129,0.4);}
+.ring-white\/10{--tw-ring-color:rgba(255,255,255,0.1);}
+.rounded-2xl{border-radius:1rem;}
+.rounded-full{border-radius:9999px;}
+.rounded-lg{border-radius:0.5rem;}
+.rounded-xl{border-radius:0.75rem;}
+.select-none{user-select:none;}
+.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.6);}
+.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.4),0 4px 6px -4px rgba(0,0,0,.4);}
+.shrink-0{flex-shrink:0;}
+@media (min-width:640px){.sm\:block{display:block;}}
+@media (min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (min-width:640px){.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media (min-width:640px){.sm\:p-8{padding:2rem;}}
+@media (min-width:640px){.sm\:text-5xl{font-size:3rem;line-height:1;}}
+@media (min-width:640px){.sm\:text-base{font-size:1rem;line-height:1.5rem;}}
+.sticky{position:sticky;}
+.text-2xl{font-size:1.5rem;line-height:2rem;}
+.text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.text-\[10px\]{font-size:10px;}
+.text-\[11px\]{font-size:11px;}
+.text-center{text-align:center;}
+.text-emerald-400{color:#34d399;}
+.text-lg{font-size:1.125rem;line-height:1.75rem;}
+.text-neutral-200{color:#e5e5e5;}
+.text-neutral-300{color:#d4d4d4;}
+.text-neutral-400{color:#a3a3a3;}
+.text-neutral-500{color:#737373;}
+.text-neutral-600{color:#525252;}
+.text-red-400{color:#f87171;}
+.text-red-500{color:#ef4444;}
+.text-red-600{color:#dc2626;}
+.text-right{text-align:right;}
+.text-sm{font-size:0.875rem;line-height:1.25rem;}
+.text-white{color:#ffffff;}
+.text-xl{font-size:1.25rem;line-height:1.75rem;}
+.text-xs{font-size:0.75rem;line-height:1rem;}
+.to-red-600{--tw-to:#dc2626;}
+.top-0{top:0;}
+.top-1\/2{top:50%;}
+.top-1\/3{top:33.333%;}
+.tracking-wide{letter-spacing:0.025em;}
+.tracking-wider{letter-spacing:0.05em;}
+.tracking-widest{letter-spacing:0.1em;}
+.transition{transition:all .15s ease;}
+.transition-all{transition:all .3s ease;}
+.w-10{width:2.5rem;}
+.w-12{width:3rem;}
+.w-20{width:5rem;}
+.w-3{width:0.75rem;}
+.w-3\.5{width:0.875rem;}
+.w-4{width:1rem;}
+.w-5{width:1.25rem;}
+.w-6{width:1.5rem;}
+.w-64{width:16rem;}
+.w-8{width:2rem;}
+.w-9{width:2.25rem;}
+.w-\[380px\]{width:380px;}
+.w-\[420px\]{width:420px;}
+.w-\[500px\]{width:500px;}
+.w-\[600px\]{width:600px;}
+.w-fit{width:fit-content;}
+.w-full{width:100%;}
+.whitespace-nowrap{white-space:nowrap;}
+.z-10{z-index:10;}
+.z-30{z-index:30;}
+.z-40{z-index:40;}
+.z-50{z-index:50;}
+.z-\[100\]{z-index:100;}
+.-m-2 { margin: -0.5rem; }
+.-translate-y-1 { transform: translateY(-0.25rem); }
+.hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
+.focus\:outline-none:focus { outline: none; }
+.flex-row { flex-direction: row; }
+@media (min-width:640px){ .sm\:flex-row { flex-direction: row; } }
+.col-span-2 { grid-column: span 2 / span 2; }
+@media (min-width:1024px){ .lg\:col-span-2 { grid-column: span 2 / span 2; } }
+.tracking-\[0\.2em\] { letter-spacing: 0.2em; }
+.line-clamp-1 { display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
+.line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, Fragment } = React;
+
+/* ---------------------------------------------------------
+   مجموعة أيقونات SVG بسيطة (بديل عن lucide-react)
+--------------------------------------------------------- */
+function Ic({ children, className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+      strokeLinecap="round" strokeLinejoin="round" className={className}>
+      {children}
+    </svg>
+  );
+}
+function Menu({ className }) { return <Ic className={className}><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></Ic>; }
+function X({ className }) { return <Ic className={className}><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></Ic>; }
+function ShieldCheck({ className }) { return <Ic className={className}><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></Ic>; }
+function Newspaper({ className }) { return <Ic className={className}><rect x="3" y="5" width="14" height="15" rx="1"/><path d="M17 8h3v10a2 2 0 0 1-2 2H7"/><line x1="7" y1="9" x2="13" y2="9"/><line x1="7" y1="13" x2="13" y2="13"/><line x1="7" y1="16" x2="11" y2="16"/></Ic>; }
+function UserPlus({ className }) { return <Ic className={className}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="16" y1="11" x2="22" y2="11"/></Ic>; }
+function ChevronLeft({ className }) { return <Ic className={className}><polyline points="15 18 9 12 15 6"/></Ic>; }
+function ChevronRight({ className }) { return <Ic className={className}><polyline points="9 18 15 12 9 6"/></Ic>; }
+function Check({ className }) { return <Ic className={className}><polyline points="20 6 9 17 4 12"/></Ic>; }
+function XCircle({ className }) { return <Ic className={className}><circle cx="12" cy="12" r="9"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></Ic>; }
+function Clock3({ className }) { return <Ic className={className}><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 12"/></Ic>; }
+function Eye({ className }) { return <Ic className={className}><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></Ic>; }
+function Pencil({ className }) { return <Ic className={className}><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></Ic>; }
+function Trash2({ className }) { return <Ic className={className}><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></Ic>; }
+function LogOut({ className }) { return <Ic className={className}><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></Ic>; }
+function LayoutDashboard({ className }) { return <Ic className={className}><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></Ic>; }
+function ClipboardList({ className }) { return <Ic className={className}><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M9 3v3h6V3"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></Ic>; }
+function UsersIcon({ className }) { return <Ic className={className}><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></Ic>; }
+function SettingsIcon({ className }) { return <Ic className={className}><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1Z"/></Ic>; }
+function MessageSquare({ className }) { return <Ic className={className}><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></Ic>; }
+function Activity({ className }) { return <Ic className={className}><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></Ic>; }
+function Facebook({ className }) { return <Ic className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></Ic>; }
+function Instagram({ className }) { return <Ic className={className}><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></Ic>; }
+function Twitter({ className }) { return <Ic className={className}><path d="M23 4.5s-1.8.9-2.8 1.1A4 4 0 0 0 13 9v1A9.4 9.4 0 0 1 3 5.5s-4 9 5 13a10 10 0 0 1-6 1.7c9 5.3 20 0 20-11.3 0-.3 0-.6-.05-.9A7.2 7.2 0 0 0 23 4.5Z"/></Ic>; }
+function Phone({ className }) { return <Ic className={className}><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2L8 10a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2Z"/></Ic>; }
+function Mail({ className }) { return <Ic className={className}><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2 7 12 13 22 7"/></Ic>; }
+function Search({ className }) { return <Ic className={className}><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></Ic>; }
+function CheckCircle2({ className }) { return <Ic className={className}><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></Ic>; }
+function KeyRound({ className }) { return <Ic className={className}><circle cx="8" cy="15" r="4"/><path d="m10.5 12.5 8-8"/><path d="m17 6 2 2"/><path d="m14 9 2 2"/></Ic>; }
+function Plus({ className }) { return <Ic className={className}><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></Ic>; }
+function ArrowRight({ className }) { return <Ic className={className}><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></Ic>; }
+
+
+
+/* ---------------------------------------------------------
+   بيانات ثابتة
+--------------------------------------------------------- */
+const WILAYAS = [
+  "أدرار","الشلف","الأغواط","أم البواقي","باتنة","بجاية","بسكرة","بشار","البليدة","البويرة",
+  "تمنراست","تبسة","تلمسان","تيارت","تيزي وزو","الجزائر","الجلفة","جيجل","سطيف","سعيدة",
+  "سكيكدة","سيدي بلعباس","عنابة","قالمة","قسنطينة","المدية","مستغانم","المسيلة","معسكر","ورقلة",
+  "وهران","البيض","إليزي","برج بوعريريج","بومرداس","الطارف","تندوف","تيسمسيلت","الوادي","خنشلة",
+  "سوق أهراس","تيبازة","ميلة","عين الدفلى","النعامة","عين تموشنت","غرداية","غليزان"
+];
+
+const POSITIONS = {
+  "حارس مرمى": [],
+  "دفاع": ["قلب دفاع", "ظهير أيمن", "ظهير أيسر"],
+  "وسط": ["وسط دفاعي", "وسط", "وسط هجومي"],
+  "هجوم": ["جناح أيمن", "جناح أيسر", "رأس حربة"],
+};
+
+const LEVELS = ["مبتدئ", "متوسط", "متقدم"];
+
+const STATUS_STYLES = {
+  "قيد المراجعة": { bg: "bg-neutral-800", text: "text-yellow-400", ring: "ring-yellow-400/30", icon: Clock3 },
+  "مقبول": { bg: "bg-neutral-800", text: "text-emerald-400", ring: "ring-emerald-400/30", icon: Check },
+  "مرفوض": { bg: "bg-neutral-800", text: "text-red-400", ring: "ring-red-400/30", icon: XCircle },
+};
+
+const DEFAULT_SETTINGS = {
+  clubNameAr: "نادي أهلي الغروس",
+  clubNameEn: "AHLI EL GHROUS CLUB",
+  motto: "الطموح • الانضباط • التميز • التطور",
+  logo: "",
+  cover: "",
+  primaryColor: "#c8102e",
+  goldColor: "#c9a227",
+  phone: "+213 555 00 00 00",
+  email: "contact@ahli-elghrous.dz",
+  facebook: "https://facebook.com",
+  instagram: "https://instagram.com",
+  twitter: "https://twitter.com",
+  languages: ["العربية"],
+};
+
+const SEED_NEWS = [
+  {
+    id: "n1",
+    title: "انطلاق الموسم الرياضي الجديد 2026",
+    description: "ينطلق النادي في موسم رياضي جديد حافل بالطموحات، مع تعزيز الفريق بعناصر شابة وخطة تدريبية متكاملة تستهدف الصعود إلى مصاف الأندية الكبرى.",
+    image: "https://picsum.photos/seed/agc-news-1/900/600",
+    date: "2026-07-01",
+  },
+  {
+    id: "n2",
+    title: "افتتاح باب التسجيل للمواسم الجديدة",
+    description: "يعلن النادي عن فتح باب الانضمام لجميع الفئات العمرية عبر نموذج تسجيل إلكتروني متكامل، حرصاً على اكتشاف المواهب الكروية عبر مختلف الولايات.",
+    image: "https://picsum.photos/seed/agc-news-2/900/600",
+    date: "2026-06-20",
+  },
+  {
+    id: "n3",
+    title: "تجديد الملعب التدريبي واستقبال طاقم فني جديد",
+    description: "شهدت منشآت النادي أعمال تهيئة شاملة استعداداً لاستقبال اللاعبين الجدد، إلى جانب التعاقد مع طاقم فني يحمل خبرة واسعة في تأطير الفئات الشابة.",
+    image: "https://picsum.photos/seed/agc-news-3/900/600",
+    date: "2026-06-05",
+  },
+];
+
+const STORAGE_KEYS = {
+  requests: "agc:requests",
+  players: "agc:players",
+  news: "agc:news",
+  messages: "agc:messages",
+  settings: "agc:settings",
+  adminUsers: "agc:adminUsers",
+  activityLog: "agc:activityLog",
+  counter: "agc:orderCounter",
+};
+
+/* ---------------------------------------------------------
+   أدوات مساعدة
+--------------------------------------------------------- */
+function calcAge(dateStr) {
+  if (!dateStr) return "-";
+  const b = new Date(dateStr);
+  if (isNaN(b)) return "-";
+  const now = new Date();
+  let age = now.getFullYear() - b.getFullYear();
+  const m = now.getMonth() - b.getMonth();
+  if (m < 0 || (m === 0 && now.getDate() < b.getDate())) age--;
+  return age;
+}
+
+function formatDate(d) {
+  try {
+    return new Date(d).toLocaleDateString("ar-DZ", { year: "numeric", month: "long", day: "numeric" });
+  } catch {
+    return d;
+  }
+}
+
+async function storageGet(key, fallback) {
+  try {
+    const res = await window.storage.get(key, true);
+    if (!res) return fallback;
+    return JSON.parse(res.value);
+  } catch {
+    return fallback;
+  }
+}
+async function storageSet(key, value) {
+  try {
+    await window.storage.set(key, JSON.stringify(value), true);
+  } catch {
+    /* silent fail, data stays in memory for this session */
+  }
+}
+
+/* ---------------------------------------------------------
+   عناصر واجهة مشتركة
+--------------------------------------------------------- */
+function Toast({ toast }) {
+  if (!toast) return null;
+  return (
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] px-5 py-3 rounded-xl shadow-2xl ring-1 ring-white/10 bg-neutral-900 text-white text-sm font-almarai flex items-center gap-2 animate-toast">
+      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+      <span>{toast}</span>
+    </div>
+  );
+}
+
+function Crest({ size = 90, style }) {
+  return (
+    <svg width={size} height={size * 1.12} viewBox="0 0 100 112" style={style}>
+      <defs>
+        <linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#e8c766" />
+          <stop offset="100%" stopColor="#a9821f" />
+        </linearGradient>
+      </defs>
+      <path d="M50 2 L96 16 V56 C96 84 76 100 50 110 C24 100 4 84 4 56 V16 Z" fill="#0b0b0d" stroke="url(#crestGold)" strokeWidth="3" />
+      <path d="M50 10 L88 22 V56 C88 78 72 92 50 101 C28 92 12 78 12 56 V22 Z" fill="#150708" stroke="url(#crestGold)" strokeWidth="1" />
+      <text x="50" y="66" textAnchor="middle" fontFamily="Changa, sans-serif" fontWeight="700" fontSize="42" fill="#c8102e" stroke="#e8c766" strokeWidth="0.6">AG</text>
+      <path d="M50 10 L50 101" stroke="#c8102e" strokeWidth="1" opacity="0.35" />
+    </svg>
+  );
+}
+
+function StepBadge({ step, current }) {
+  const active = step === current;
+  const done = step < current;
+  return (
+    <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold border-2 shrink-0 transition-all
+      ${active ? "border-red-600 text-white bg-red-600/20 scale-110" : done ? "border-yellow-500 text-yellow-400" : "border-neutral-700 text-neutral-500"}`}>
+      {step}
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   التطبيق الرئيسي
+--------------------------------------------------------- */
+function App() {
+  const [route, setRoute] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [toast, setToast] = useState(null);
+
+  const [requests, setRequests] = useState([]);
+  const [players, setPlayers] = useState([]);
+  const [news, setNews] = useState(SEED_NEWS);
+  const [messages, setMessages] = useState([]);
+  const [settings, setSettings] = useState(DEFAULT_SETTINGS);
+  const [adminUsers, setAdminUsers] = useState([{ username: "admin", password: "admin123", role: "مدير عام" }]);
+  const [activityLog, setActivityLog] = useState([]);
+  const [orderCounter, setOrderCounter] = useState(0);
+
+  const [adminAuthed, setAdminAuthed] = useState(false);
+  const [currentAdmin, setCurrentAdmin] = useState(null);
+  const [adminTab, setAdminTab] = useState("dashboard");
+
+  const [lastOrder, setLastOrder] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const [r, p, n, m, s, au, log, oc] = await Promise.all([
+        storageGet(STORAGE_KEYS.requests, []),
+        storageGet(STORAGE_KEYS.players, []),
+        storageGet(STORAGE_KEYS.news, SEED_NEWS),
+        storageGet(STORAGE_KEYS.messages, []),
+        storageGet(STORAGE_KEYS.settings, DEFAULT_SETTINGS),
+        storageGet(STORAGE_KEYS.adminUsers, [{ username: "admin", password: "admin123", role: "مدير عام" }]),
+        storageGet(STORAGE_KEYS.activityLog, []),
+        storageGet(STORAGE_KEYS.counter, 0),
+      ]);
+      setRequests(r); setPlayers(p); setNews(n); setMessages(m);
+      setSettings(s); setAdminUsers(au); setActivityLog(log); setOrderCounter(oc);
+      setLoading(false);
+    })();
+  }, []);
+
+  function showToast(msg) {
+    setToast(msg);
+    setTimeout(() => setToast(null), 2600);
+  }
+
+  function logActivity(action) {
+    const entry = { id: Date.now(), action, actor: currentAdmin?.username || "زائر", at: new Date().toISOString() };
+    const updated = [entry, ...activityLog].slice(0, 200);
+    setActivityLog(updated);
+    storageSet(STORAGE_KEYS.activityLog, updated);
+  }
+
+  function goto(r) {
+    setRoute(r);
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /* ---------- عمليات الطلبات ---------- */
+  async function submitRequest(form) {
+    const nextCounter = orderCounter + 1;
+    const orderNumber = `AGC-2026-${String(nextCounter).padStart(4, "0")}`;
+    const req = {
+      id: Date.now().toString(),
+      orderNumber,
+      ...form,
+      status: "قيد المراجعة",
+      note: "",
+      createdAt: new Date().toISOString(),
+    };
+    const updated = [req, ...requests];
+    setRequests(updated); setOrderCounter(nextCounter); setLastOrder(orderNumber);
+    await storageSet(STORAGE_KEYS.requests, updated);
+    await storageSet(STORAGE_KEYS.counter, nextCounter);
+    logActivity(`طلب انضمام جديد (${orderNumber})`);
+    goto("success");
+  }
+
+  async function updateRequestStatus(id, status, note) {
+    const target = requests.find((r) => r.id === id);
+    const updated = requests.map((r) => (r.id === id ? { ...r, status, note: note ?? r.note } : r));
+    setRequests(updated);
+    await storageSet(STORAGE_KEYS.requests, updated);
+    logActivity(`تغيير حالة الطلب ${target?.orderNumber} إلى "${status}"`);
+
+    if (status === "مقبول" && target && !players.some((p) => p.requestId === id)) {
+      const player = {
+        id: "p" + Date.now(),
+        requestId: id,
+        firstName: target.firstName, lastName: target.lastName,
+        birthDate: target.birthDate, wilaya: target.wilaya,
+        position: target.position, subPosition: target.subPosition,
+        level: target.level, phone: target.phone,
+      };
+      const updatedPlayers = [player, ...players];
+      setPlayers(updatedPlayers);
+      await storageSet(STORAGE_KEYS.players, updatedPlayers);
+      logActivity(`إضافة اللاعب ${player.firstName} ${player.lastName} تلقائياً`);
+    }
+  }
+
+  async function deletePlayer(id) {
+    const target = players.find((p) => p.id === id);
+    const updated = players.filter((p) => p.id !== id);
+    setPlayers(updated);
+    await storageSet(STORAGE_KEYS.players, updated);
+    logActivity(`حذف اللاعب ${target?.firstName || ""} ${target?.lastName || ""}`);
+  }
+  async function updatePlayer(id, patch) {
+    const updated = players.map((p) => (p.id === id ? { ...p, ...patch } : p));
+    setPlayers(updated);
+    await storageSet(STORAGE_KEYS.players, updated);
+    logActivity(`تعديل بيانات لاعب`);
+  }
+
+  /* ---------- عمليات الأخبار ---------- */
+  async function saveNewsItem(item) {
+    let updated;
+    if (item.id) {
+      updated = news.map((n) => (n.id === item.id ? item : n));
+      logActivity(`تعديل خبر: ${item.title}`);
+    } else {
+      updated = [{ ...item, id: "n" + Date.now() }, ...news];
+      logActivity(`إضافة خبر جديد: ${item.title}`);
+    }
+    setNews(updated);
+    await storageSet(STORAGE_KEYS.news, updated);
+  }
+  async function deleteNewsItem(id) {
+    const target = news.find((n) => n.id === id);
+    const updated = news.filter((n) => n.id !== id);
+    setNews(updated);
+    await storageSet(STORAGE_KEYS.news, updated);
+    logActivity(`حذف خبر: ${target?.title || ""}`);
+  }
+
+  /* ---------- الرسائل ---------- */
+  async function submitMessage(msg) {
+    const entry = { id: Date.now().toString(), ...msg, date: new Date().toISOString() };
+    const updated = [entry, ...messages];
+    setMessages(updated);
+    await storageSet(STORAGE_KEYS.messages, updated);
+    showToast("تم إرسال رسالتك بنجاح، سنتواصل معك قريباً.");
+  }
+
+  /* ---------- الإعدادات ---------- */
+  async function saveSettings(s) {
+    setSettings(s);
+    await storageSet(STORAGE_KEYS.settings, s);
+    logActivity("تحديث إعدادات الموقع");
+    showToast("تم حفظ الإعدادات");
+  }
+
+  /* ---------- المستخدمون ---------- */
+  async function addAdminUser(u) {
+    const updated = [...adminUsers, u];
+    setAdminUsers(updated);
+    await storageSet(STORAGE_KEYS.adminUsers, updated);
+    logActivity(`إنشاء مستخدم إداري جديد: ${u.username}`);
+  }
+  async function deleteAdminUser(username) {
+    if (adminUsers.length <= 1) return;
+    const updated = adminUsers.filter((u) => u.username !== username);
+    setAdminUsers(updated);
+    await storageSet(STORAGE_KEYS.adminUsers, updated);
+    logActivity(`حذف مستخدم إداري: ${username}`);
+  }
+
+  function adminLogin(username, password) {
+    const found = adminUsers.find((u) => u.username === username && u.password === password);
+    if (found) {
+      setAdminAuthed(true);
+      setCurrentAdmin(found);
+      setAdminTab("dashboard");
+      goto("admin");
+      return true;
+    }
+    return false;
+  }
+  function adminLogout() {
+    setAdminAuthed(false);
+    setCurrentAdmin(null);
+    goto("home");
+  }
+
+  const brandStyle = { "--brand": settings.primaryColor, "--gold": settings.goldColor };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="w-10 h-10 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  return (
+    <div dir="rtl" style={brandStyle} className="min-h-screen bg-black text-white font-almarai">
+      <GlobalStyle />
+      <Toast toast={toast} />
+
+      {route === "admin-login" && (
+        <AdminLogin onBack={() => goto("home")} onLogin={adminLogin} settings={settings} />
+      )}
+
+      {route === "admin" && adminAuthed && (
+        <AdminApp
+          settings={settings} currentAdmin={currentAdmin} adminTab={adminTab} setAdminTab={setAdminTab}
+          requests={requests} players={players} news={news} messages={messages}
+          adminUsers={adminUsers} activityLog={activityLog}
+          updateRequestStatus={updateRequestStatus} deletePlayer={deletePlayer} updatePlayer={updatePlayer}
+          saveNewsItem={saveNewsItem} deleteNewsItem={deleteNewsItem} saveSettings={saveSettings}
+          addAdminUser={addAdminUser} deleteAdminUser={deleteAdminUser}
+          onLogout={adminLogout} onExit={() => goto("home")}
+        />
+      )}
+
+      {route !== "admin" && route !== "admin-login" && (
+        <PublicSite
+          route={route} goto={goto} menuOpen={menuOpen} setMenuOpen={setMenuOpen}
+          settings={settings} news={news} requests={requests}
+          submitRequest={submitRequest} submitMessage={submitMessage} lastOrder={lastOrder}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   الموقع العام
+--------------------------------------------------------- */
+function PublicSite({ route, goto, menuOpen, setMenuOpen, settings, news, requests, submitRequest, submitMessage, lastOrder }) {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header goto={goto} menuOpen={menuOpen} setMenuOpen={setMenuOpen} settings={settings} route={route} />
+      <main className="flex-1">
+        {route === "home" && <Home goto={goto} settings={settings} />}
+        {route === "join" && <JoinForm onSubmit={submitRequest} goto={goto} />}
+        {route === "success" && <SuccessPage order={lastOrder} goto={goto} />}
+        {route === "track" && <TrackStatus requests={requests} />}
+        {route === "news" && <NewsPage news={news} />}
+        {route === "contact" && <ContactPage settings={settings} onSubmit={submitMessage} />}
+      </main>
+      <Footer goto={goto} settings={settings} />
+    </div>
+  );
+}
+
+function Header({ goto, menuOpen, setMenuOpen, settings, route }) {
+  const links = [
+    { key: "home", label: "الرئيسية" },
+    { key: "news", label: "الأخبار" },
+    { key: "track", label: "متابعة حالة الطلب" },
+    { key: "contact", label: "تواصل معنا" },
+  ];
+  return (
+    <header className="sticky top-0 z-40 bg-black/90 backdrop-blur border-b border-neutral-800">
+      <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+        <button onClick={() => setMenuOpen((o) => !o)} className="p-2 -m-2 text-neutral-300 hover:text-white md:hidden">
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
+        <nav className="hidden md:flex items-center gap-6 order-1">
+          {links.map((l) => (
+            <button key={l.key} onClick={() => goto(l.key)}
+              className={`text-sm font-bold transition-colors ${route === l.key ? "text-red-500" : "text-neutral-300 hover:text-white"}`}>
+              {l.label}
+            </button>
+          ))}
+        </nav>
+
+        <button onClick={() => goto("home")} className="flex items-center gap-3 order-2 md:order-3">
+          <div className="text-right leading-tight hidden sm:block">
+            <div className="font-changa font-bold text-lg">{settings.clubNameAr}</div>
+            <div className="text-[11px] tracking-[0.2em] text-red-500 font-changa">{settings.clubNameEn}</div>
+          </div>
+          <Crest size={44} />
+        </button>
+
+        <button onClick={() => goto("join")}
+          className="hidden md:flex order-4 items-center gap-2 bg-gradient-to-l from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-red-900/40 transition">
+          <UserPlus className="w-4 h-4" /> انضم إلى النادي
+        </button>
+      </div>
+
+      {menuOpen && (
+        <div className="md:hidden border-t border-neutral-800 bg-neutral-950 px-4 py-4 flex flex-col gap-3">
+          {links.map((l) => (
+            <button key={l.key} onClick={() => goto(l.key)} className="text-right py-2 text-neutral-200 font-bold">
+              {l.label}
+            </button>
+          ))}
+          <button onClick={() => goto("join")}
+            className="mt-2 flex items-center justify-center gap-2 bg-red-600 px-4 py-3 rounded-lg text-sm font-bold">
+            <UserPlus className="w-4 h-4" /> انضم إلى النادي
+          </button>
+        </div>
+      )}
+    </header>
+  );
+}
+
+function Footer({ goto, settings }) {
+  return (
+    <footer className="border-t border-neutral-800 bg-neutral-950">
+      <div className="max-w-6xl mx-auto px-4 py-12 grid sm:grid-cols-3 gap-10">
+        <div>
+          <div className="flex items-center gap-3 mb-3">
+            <Crest size={40} />
+            <div>
+              <div className="font-changa font-bold">{settings.clubNameAr}</div>
+              <div className="text-[10px] tracking-[0.2em] text-red-500 font-changa">{settings.clubNameEn}</div>
+            </div>
+          </div>
+          <p className="text-sm text-neutral-500">{settings.motto}</p>
+        </div>
+        <div>
+          <div className="text-sm font-bold text-neutral-300 mb-3">روابط سريعة</div>
+          <div className="flex flex-col gap-2 text-sm text-neutral-500">
+            <button onClick={() => goto("home")} className="text-right hover:text-red-500 w-fit">الرئيسية</button>
+            <button onClick={() => goto("join")} className="text-right hover:text-red-500 w-fit">انضم إلى النادي</button>
+            <button onClick={() => goto("news")} className="text-right hover:text-red-500 w-fit">الأخبار</button>
+            <button onClick={() => goto("track")} className="text-right hover:text-red-500 w-fit">متابعة حالة الطلب</button>
+          </div>
+        </div>
+        <div>
+          <div className="text-sm font-bold text-neutral-300 mb-3">تابعنا</div>
+          <div className="flex gap-3 mb-4">
+            <a href={settings.twitter} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-red-600 transition"><Twitter className="w-4 h-4" /></a>
+            <a href={settings.instagram} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-red-600 transition"><Instagram className="w-4 h-4" /></a>
+            <a href={settings.facebook} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-red-600 transition"><Facebook className="w-4 h-4" /></a>
+          </div>
+          <div className="text-sm text-neutral-500 flex items-center gap-2"><Phone className="w-3.5 h-3.5" /> {settings.phone}</div>
+          <div className="text-sm text-neutral-500 flex items-center gap-2 mt-1"><Mail className="w-3.5 h-3.5" /> {settings.email}</div>
+        </div>
+      </div>
+      <div className="border-t border-neutral-900 py-4 px-4 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-600">
+        <span>© 2026 {settings.clubNameAr}. جميع الحقوق محفوظة.</span>
+        <button onClick={() => goto("admin-login")} className="hover:text-red-500 flex items-center gap-1">
+          <ShieldCheck className="w-3.5 h-3.5" /> دخول الإدارة
+        </button>
+      </div>
+    </footer>
+  );
+}
+
+/* ---------------------------------------------------------
+   الصفحة الرئيسية
+--------------------------------------------------------- */
+function Home({ goto, settings }) {
+  return (
+    <section className="relative overflow-hidden min-h-[calc(100vh-5rem)] flex items-center justify-center px-4 py-20">
+      {/* إضاءة الملعب */}
+      <div className="pointer-events-none absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-red-700/25 blur-[100px]" />
+      <div className="pointer-events-none absolute -top-24 -left-24 w-[380px] h-[380px] rounded-full bg-yellow-500/10 blur-[110px]" />
+      {/* دخان */}
+      <div className="pointer-events-none absolute inset-0 opacity-40">
+        <div className="absolute w-[600px] h-[600px] rounded-full bg-neutral-500/10 blur-[90px] animate-drift1 left-1/3 top-1/2" />
+        <div className="absolute w-[500px] h-[500px] rounded-full bg-neutral-400/10 blur-[100px] animate-drift2 right-1/4 top-1/3" />
+      </div>
+      {/* جماهير (نسيج) */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
+        backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+        backgroundSize: "14px 14px",
+      }} />
+      {/* الأحرف AGC */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center select-none overflow-hidden">
+        <span className="font-changa font-extrabold text-white opacity-[0.07] leading-none" style={{ fontSize: "42vw" }}>AGC</span>
+      </div>
+
+      <div className="relative z-10 max-w-2xl w-full text-center flex flex-col items-center">
+        <div className="relative mb-6 animate-fadeUp">
+          <div className="absolute inset-0 rounded-full bg-red-600/30 blur-2xl animate-glow" />
+          <Crest size={130} style={{ position: "relative" }} />
+        </div>
+
+        <h1 className="font-changa font-extrabold text-3xl sm:text-5xl leading-tight mb-4 animate-fadeUp" style={{ animationDelay: "80ms" }}>
+          WELCOME TO <span className="text-red-600">AHLI EL</span><br />
+          <span className="text-red-600">GHROUS</span> CLUB
+        </h1>
+
+        <p className="text-neutral-300 text-sm sm:text-base tracking-wide mb-10 animate-fadeUp" style={{ animationDelay: "160ms" }}>
+          <span className="text-red-500 font-bold">الطموح</span> • <span className="text-red-500 font-bold">الانضباط</span> • <span className="text-red-500 font-bold">التميز</span> • <span className="text-red-500 font-bold">التطور</span>
+        </p>
+
+        <div className="grid sm:grid-cols-2 gap-5 w-full animate-fadeUp" style={{ animationDelay: "240ms" }}>
+          <button onClick={() => goto("join")}
+            className="group text-right bg-neutral-950/70 border border-neutral-800 hover:border-red-600 rounded-2xl p-6 transition-all hover:-translate-y-1">
+            <div className="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center mb-4 shadow-lg shadow-red-900/50">
+              <UserPlus className="w-6 h-6" />
+            </div>
+            <div className="font-changa font-bold text-lg mb-1">انضم إلى النادي</div>
+            <div className="text-xs text-neutral-500">قدّم طلب انضمامك للنادي عبر نموذج تسجيل متكامل بخطوة بخطوة.</div>
+            <div className="mt-4 text-red-500 text-sm font-bold flex items-center gap-1 justify-end">
+              ابدأ التسجيل <ChevronLeft className="w-4 h-4" />
+            </div>
+          </button>
+
+          <button onClick={() => goto("news")}
+            className="group text-right bg-neutral-950/70 border border-neutral-800 hover:border-red-600 rounded-2xl p-6 transition-all hover:-translate-y-1">
+            <div className="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center mb-4 shadow-lg shadow-red-900/50">
+              <Newspaper className="w-6 h-6" />
+            </div>
+            <div className="font-changa font-bold text-lg mb-1">آخر الأخبار</div>
+            <div className="text-xs text-neutral-500">تابع أحدث أخبار النادي والفعاليات والإنجازات أولاً بأول.</div>
+            <div className="mt-4 text-red-500 text-sm font-bold flex items-center gap-1 justify-end">
+              تصفّح الأخبار <ChevronLeft className="w-4 h-4" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------------------------------------------------
+   نموذج الانضمام (5 خطوات)
+--------------------------------------------------------- */
+function JoinForm({ onSubmit, goto }) {
+  const [step, setStep] = useState(1);
+  const [errors, setErrors] = useState({});
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", birthDate: "", phone: "", wilaya: "", baladiya: "", hay: "",
+    position: "", subPosition: "", level: "", previousClub: "",
+  });
+
+  function set(k, v) { setForm((f) => ({ ...f, [k]: v })); }
+
+  function validateStep() {
+    const e = {};
+    if (step === 1) {
+      ["firstName", "lastName", "birthDate", "phone", "wilaya", "baladiya", "hay"].forEach((k) => {
+        if (!form[k]) e[k] = "هذا الحقل مطلوب";
+      });
+    }
+    if (step === 2) {
+      if (!form.position) e.position = "اختر المركز";
+      else if (POSITIONS[form.position].length > 0 && !form.subPosition) e.subPosition = "اختر المركز التفصيلي";
+    }
+    if (step === 3 && !form.level) e.level = "اختر المستوى";
+    if (step === 4 && !form.previousClub) e.previousClub = "اختر إجابة";
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  }
+
+  function next() { if (validateStep()) setStep((s) => Math.min(5, s + 1)); }
+  function prev() { setStep((s) => Math.max(1, s - 1)); }
+
+  return (
+    <section className="max-w-2xl mx-auto px-4 py-14">
+      <div className="text-center mb-8">
+        <h1 className="font-changa font-bold text-3xl mb-2">التسجيل في النادي</h1>
+        <p className="text-neutral-500 text-sm">أكمل الخطوات التالية لتقديم طلبك</p>
+      </div>
+
+      <div className="flex items-center justify-center gap-3 mb-10">
+        {[5, 4, 3, 2, 1].map((n, i) => (
+          <React.Fragment key={n}>
+            <StepBadge step={n} current={step} />
+            {i < 4 && <div className="w-8 h-px bg-neutral-800" />}
+          </React.Fragment>
+        ))}
+      </div>
+
+      <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 sm:p-8">
+        {step === 1 && (
+          <div className="space-y-5">
+            <h2 className="font-changa font-bold text-xl mb-1">المعلومات الشخصية</h2>
+            <Field label="الاسم" value={form.firstName} onChange={(v) => set("firstName", v)} error={errors.firstName} />
+            <Field label="اللقب" value={form.lastName} onChange={(v) => set("lastName", v)} error={errors.lastName} />
+            <Field type="date" label="تاريخ الميلاد" value={form.birthDate} onChange={(v) => set("birthDate", v)} error={errors.birthDate} />
+            <Field type="tel" label="رقم الهاتف" value={form.phone} onChange={(v) => set("phone", v)} error={errors.phone} />
+            <SelectField label="الولاية" value={form.wilaya} onChange={(v) => set("wilaya", v)} options={WILAYAS} error={errors.wilaya} />
+            <Field label="البلدية" value={form.baladiya} onChange={(v) => set("baladiya", v)} error={errors.baladiya} />
+            <Field label="الحي" value={form.hay} onChange={(v) => set("hay", v)} error={errors.hay} />
+          </div>
+        )}
+
+        {step === 2 && (
+          <div className="space-y-6">
+            <h2 className="font-changa font-bold text-xl mb-1">المعلومات الرياضية</h2>
+            <div>
+              <div className="text-sm text-neutral-400 mb-3">المركز</div>
+              <div className="grid grid-cols-2 gap-3">
+                {Object.keys(POSITIONS).map((p) => (
+                  <ChoiceCard key={p} label={p} active={form.position === p}
+                    onClick={() => { set("position", p); set("subPosition", ""); }} />
+                ))}
+              </div>
+              {errors.position && <ErrorText text={errors.position} />}
+            </div>
+
+            {form.position && POSITIONS[form.position].length > 0 && (
+              <div>
+                <div className="text-sm text-neutral-400 mb-3">المركز التفصيلي</div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {POSITIONS[form.position].map((sp) => (
+                    <ChoiceCard key={sp} label={sp} active={form.subPosition === sp} onClick={() => set("subPosition", sp)} small />
+                  ))}
+                </div>
+                {errors.subPosition && <ErrorText text={errors.subPosition} />}
+              </div>
+            )}
+          </div>
+        )}
+
+        {step === 3 && (
+          <div>
+            <h2 className="font-changa font-bold text-xl mb-4">المستوى</h2>
+            <div className="grid grid-cols-3 gap-3">
+              {LEVELS.map((l) => (
+                <ChoiceCard key={l} label={l} active={form.level === l} onClick={() => set("level", l)} />
+              ))}
+            </div>
+            {errors.level && <ErrorText text={errors.level} />}
+          </div>
+        )}
+
+        {step === 4 && (
+          <div>
+            <h2 className="font-changa font-bold text-xl mb-4">هل سبق أن لعبت في نادٍ؟</h2>
+            <div className="grid grid-cols-2 gap-3">
+              <ChoiceCard label="نعم" active={form.previousClub === "نعم"} onClick={() => set("previousClub", "نعم")} />
+              <ChoiceCard label="لا" active={form.previousClub === "لا"} onClick={() => set("previousClub", "لا")} />
+            </div>
+            {errors.previousClub && <ErrorText text={errors.previousClub} />}
+          </div>
+        )}
+
+        {step === 5 && (
+          <div>
+            <h2 className="font-changa font-bold text-xl mb-5">مراجعة البيانات</h2>
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+              <Review label="الاسم" value={form.firstName} />
+              <Review label="اللقب" value={form.lastName} />
+              <Review label="تاريخ الميلاد" value={form.birthDate} />
+              <Review label="رقم الهاتف" value={form.phone} />
+              <Review label="الولاية" value={form.wilaya} />
+              <Review label="البلدية" value={form.baladiya} />
+              <Review label="الحي" value={form.hay} />
+              <Review label="المركز" value={form.subPosition ? `${form.position} - ${form.subPosition}` : form.position} />
+              <Review label="المستوى" value={form.level} />
+              <Review label="لعب سابق في نادٍ" value={form.previousClub} />
+            </div>
+          </div>
+        )}
+
+        <div className="flex items-center justify-between mt-8 pt-6 border-t border-neutral-900">
+          {step > 1 ? (
+            <button onClick={prev} className="flex items-center gap-1 text-sm text-neutral-400 hover:text-white font-bold">
+              <ChevronRight className="w-4 h-4" /> السابق
+            </button>
+          ) : <button onClick={() => goto("home")} className="text-sm text-neutral-500 hover:text-white">إلغاء</button>}
+
+          {step < 5 ? (
+            <button onClick={next} className="flex items-center gap-1 bg-red-600 hover:bg-red-500 px-5 py-2.5 rounded-lg text-sm font-bold">
+              التالي <ChevronLeft className="w-4 h-4" />
+            </button>
+          ) : (
+            <button onClick={() => onSubmit(form)} className="flex items-center gap-2 bg-red-600 hover:bg-red-500 px-6 py-2.5 rounded-lg text-sm font-bold">
+              <Check className="w-4 h-4" /> تأكيد وإرسال الطلب
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Field({ label, value, onChange, type = "text", error }) {
+  return (
+    <label className="block">
+      <span className="block text-sm text-neutral-400 mb-1.5 text-right">{label}</span>
+      <input type={type} value={value} onChange={(e) => onChange(e.target.value)}
+        className={`w-full bg-neutral-900 border rounded-lg px-4 py-2.5 text-sm text-right focus:outline-none focus:ring-2 focus:ring-red-600/50 ${error ? "border-red-600" : "border-neutral-800"}`} />
+      {error && <ErrorText text={error} />}
+    </label>
+  );
+}
+function SelectField({ label, value, onChange, options, error }) {
+  return (
+    <label className="block">
+      <span className="block text-sm text-neutral-400 mb-1.5 text-right">{label}</span>
+      <select value={value} onChange={(e) => onChange(e.target.value)}
+        className={`w-full bg-neutral-900 border rounded-lg px-4 py-2.5 text-sm text-right focus:outline-none focus:ring-2 focus:ring-red-600/50 ${error ? "border-red-600" : "border-neutral-800"}`}>
+        <option value="">اختر...</option>
+        {options.map((o) => <option key={o} value={o}>{o}</option>)}
+      </select>
+      {error && <ErrorText text={error} />}
+    </label>
+  );
+}
+function ErrorText({ text }) {
+  return <div className="text-xs text-red-500 mt-1 text-right">{text}</div>;
+}
+function ChoiceCard({ label, active, onClick, small }) {
+  return (
+    <button onClick={onClick}
+      className={`${small ? "py-2.5" : "py-4"} px-3 rounded-xl border text-sm font-bold transition-all
+      ${active ? "border-red-600 bg-red-600/15 text-white" : "border-neutral-800 bg-neutral-900 text-neutral-400 hover:border-neutral-600"}`}>
+      {label}
+    </button>
+  );
+}
+function Review({ label, value }) {
+  return (
+    <div className="flex items-center justify-between bg-neutral-900/60 rounded-lg px-3 py-2">
+      <span className="text-neutral-500">{label}</span>
+      <span className="font-bold">{value || "-"}</span>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   صفحة النجاح
+--------------------------------------------------------- */
+function SuccessPage({ order, goto }) {
+  return (
+    <section className="max-w-lg mx-auto px-4 py-24 text-center">
+      <div className="w-20 h-20 rounded-full bg-emerald-500/15 ring-1 ring-emerald-500/40 flex items-center justify-center mx-auto mb-6">
+        <CheckCircle2 className="w-10 h-10 text-emerald-400" />
+      </div>
+      <h1 className="font-changa font-bold text-2xl mb-2">تم إرسال طلبك بنجاح</h1>
+      <p className="text-neutral-500 text-sm mb-6">سيقوم فريق النادي بمراجعة طلبك والرد عليك في أقرب وقت.</p>
+      <div className="bg-neutral-950 border border-neutral-800 rounded-2xl py-6 px-4 mb-8">
+        <div className="text-xs text-neutral-500 mb-1">رقم الطلب</div>
+        <div className="font-changa font-bold text-2xl text-red-500 tracking-wider">{order || "AGC-2026-0000"}</div>
+      </div>
+      <button onClick={() => goto("track")} className="w-full bg-red-600 hover:bg-red-500 py-3 rounded-lg text-sm font-bold">
+        متابعة حالة الطلب
+      </button>
+      <button onClick={() => goto("home")} className="w-full mt-3 text-neutral-500 hover:text-white text-sm">العودة للرئيسية</button>
+    </section>
+  );
+}
+
+/* ---------------------------------------------------------
+   متابعة حالة الطلب
+--------------------------------------------------------- */
+function TrackStatus({ requests }) {
+  const [q, setQ] = useState("");
+  const [result, setResult] = useState(undefined);
+
+  function search() {
+    const found = requests.find((r) => r.orderNumber.trim() === q.trim());
+    setResult(found || null);
+  }
+
+  return (
+    <section className="max-w-lg mx-auto px-4 py-16">
+      <h1 className="font-changa font-bold text-2xl mb-2 text-center">متابعة حالة الطلب</h1>
+      <p className="text-neutral-500 text-sm text-center mb-8">أدخل رقم الطلب الذي حصلت عليه بعد التسجيل</p>
+      <div className="flex gap-2 mb-8">
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="AGC-2026-0001"
+          className="flex-1 bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600/50 text-center tracking-widest" />
+        <button onClick={search} className="bg-red-600 hover:bg-red-500 px-5 rounded-lg"><Search className="w-4 h-4" /></button>
+      </div>
+
+      {result === null && (
+        <div className="text-center text-neutral-500 text-sm">لم يتم العثور على طلب بهذا الرقم.</div>
+      )}
+      {result && (
+        <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 text-center">
+          <div className="text-xs text-neutral-500 mb-1">{result.orderNumber}</div>
+          <div className="font-bold text-lg mb-4">{result.firstName} {result.lastName}</div>
+          <StatusBadge status={result.status} large />
+          {result.note && <div className="mt-4 text-sm text-neutral-400 bg-neutral-900 rounded-lg p-3">{result.note}</div>}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function StatusBadge({ status, large }) {
+  const s = STATUS_STYLES[status] || STATUS_STYLES["قيد المراجعة"];
+  const Icon = s.icon;
+  return (
+    <span className={`inline-flex items-center gap-1.5 ${s.bg} ${s.text} ring-1 ${s.ring} rounded-full ${large ? "px-4 py-2 text-sm" : "px-2.5 py-1 text-xs"} font-bold`}>
+      <Icon className={large ? "w-4 h-4" : "w-3 h-3"} /> {status}
+    </span>
+  );
+}
+
+/* ---------------------------------------------------------
+   الأخبار
+--------------------------------------------------------- */
+function NewsPage({ news }) {
+  return (
+    <section className="max-w-6xl mx-auto px-4 py-14">
+      <h1 className="font-changa font-bold text-3xl mb-8 text-center">أخبار النادي</h1>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {news.map((n) => (
+          <article key={n.id} className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-red-600/60 transition group">
+            <div className="aspect-[3/2] overflow-hidden bg-neutral-900">
+              <img src={n.image} alt={n.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            </div>
+            <div className="p-5">
+              <div className="text-xs text-neutral-500 mb-2">{formatDate(n.date)}</div>
+              <h3 className="font-changa font-bold text-lg mb-2">{n.title}</h3>
+              <p className="text-sm text-neutral-400 line-clamp-3">{n.description}</p>
+            </div>
+          </article>
+        ))}
+        {news.length === 0 && <div className="col-span-full text-center text-neutral-500 py-16">لا توجد أخبار حالياً.</div>}
+      </div>
+    </section>
+  );
+}
+
+/* ---------------------------------------------------------
+   تواصل معنا
+--------------------------------------------------------- */
+function ContactPage({ settings, onSubmit }) {
+  const [form, setForm] = useState({ name: "", contact: "", message: "" });
+  function set(k, v) { setForm((f) => ({ ...f, [k]: v })); }
+  function submit() {
+    if (!form.name || !form.contact || !form.message) return;
+    onSubmit(form);
+    setForm({ name: "", contact: "", message: "" });
+  }
+  return (
+    <section className="max-w-lg mx-auto px-4 py-16">
+      <h1 className="font-changa font-bold text-2xl mb-2 text-center">تواصل معنا</h1>
+      <p className="text-neutral-500 text-sm text-center mb-8">لأي استفسار، راسلنا وسنرد عليك في أقرب وقت</p>
+      <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 space-y-4">
+        <Field label="الاسم" value={form.name} onChange={(v) => set("name", v)} />
+        <Field label="البريد الإلكتروني أو رقم الهاتف" value={form.contact} onChange={(v) => set("contact", v)} />
+        <label className="block">
+          <span className="block text-sm text-neutral-400 mb-1.5 text-right">الرسالة</span>
+          <textarea value={form.message} onChange={(e) => set("message", e.target.value)} rows={4}
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2.5 text-sm text-right focus:outline-none focus:ring-2 focus:ring-red-600/50" />
+        </label>
+        <button onClick={submit} className="w-full bg-red-600 hover:bg-red-500 py-3 rounded-lg text-sm font-bold">إرسال الرسالة</button>
+        <div className="text-xs text-neutral-600 text-center pt-2">{settings.phone} · {settings.email}</div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------------------------------------------------
+   تسجيل دخول الإدارة
+--------------------------------------------------------- */
+function AdminLogin({ onBack, onLogin, settings }) {
+  const [u, setU] = useState("");
+  const [p, setP] = useState("");
+  const [err, setErr] = useState("");
+
+  function submit() {
+    if (!onLogin(u, p)) setErr("بيانات الدخول غير صحيحة");
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center px-4 bg-black relative overflow-hidden">
+      <div className="pointer-events-none absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-red-700/20 blur-[100px]" />
+      <div dir="rtl" className="relative w-full max-w-sm bg-neutral-950 border border-neutral-800 rounded-2xl p-8 text-center">
+        <Crest size={70} style={{ margin: "0 auto 16px" }} />
+        <h1 className="font-changa font-bold text-xl mb-1 flex items-center justify-center gap-2">
+          لوحة تحكم الإدارة <ShieldCheck className="w-5 h-5 text-red-500" />
+        </h1>
+        <p className="text-neutral-500 text-sm mb-6">سجّل الدخول للمتابعة</p>
+
+        <div className="space-y-4 text-right">
+          <Field label="البريد الإلكتروني / اسم المستخدم" value={u} onChange={setU} />
+          <label className="block">
+            <span className="block text-sm text-neutral-400 mb-1.5 text-right">كلمة المرور</span>
+            <input type="password" value={p} onChange={(e) => setP(e.target.value)}
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2.5 text-sm text-right focus:outline-none focus:ring-2 focus:ring-red-600/50" />
+          </label>
+          {err && <div className="text-xs text-red-500">{err}</div>}
+          <button onClick={submit} className="w-full bg-red-600 hover:bg-red-500 py-3 rounded-lg text-sm font-bold">دخول</button>
+          <div className="text-xs text-neutral-600 pt-1">تجريبي: admin / admin123</div>
+          <button onClick={onBack} className="text-sm text-neutral-500 hover:text-white flex items-center gap-1 justify-center w-full pt-2">
+            <ArrowRight className="w-3.5 h-3.5" /> العودة إلى الموقع
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   لوحة تحكم الإدارة
+--------------------------------------------------------- */
+function AdminApp({
+  settings, currentAdmin, adminTab, setAdminTab, requests, players, news, messages,
+  adminUsers, activityLog, updateRequestStatus, deletePlayer, updatePlayer, saveNewsItem,
+  deleteNewsItem, saveSettings, addAdminUser, deleteAdminUser, onLogout, onExit,
+}) {
+  const tabs = [
+    { key: "dashboard", label: "لوحة القيادة", icon: LayoutDashboard },
+    { key: "requests", label: "طلبات التسجيل", icon: ClipboardList },
+    { key: "players", label: "اللاعبون", icon: UsersIcon },
+    { key: "news", label: "الأخبار", icon: Newspaper },
+    { key: "messages", label: "الرسائل", icon: MessageSquare },
+    { key: "settings", label: "الإعدادات", icon: SettingsIcon },
+    { key: "users", label: "المستخدمون", icon: KeyRound },
+    { key: "log", label: "سجل النشاط", icon: Activity },
+  ];
+
+  return (
+    <div className="min-h-screen flex">
+      <aside className="hidden md:flex w-64 shrink-0 bg-neutral-950 border-l border-neutral-800 flex-col p-4">
+        <div className="flex items-center gap-2 px-2 py-3 mb-4">
+          <Crest size={34} />
+          <div>
+            <div className="font-changa font-bold text-sm">{settings.clubNameAr}</div>
+            <div className="text-[10px] text-neutral-500">الإدارة</div>
+          </div>
+        </div>
+        <nav className="flex-1 space-y-1">
+          {tabs.map((t) => (
+            <button key={t.key} onClick={() => setAdminTab(t.key)}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-bold transition ${adminTab === t.key ? "bg-red-600/15 text-red-400 ring-1 ring-red-600/30" : "text-neutral-400 hover:bg-neutral-900"}`}>
+              <t.icon className="w-4 h-4" /> {t.label}
+            </button>
+          ))}
+        </nav>
+        <div className="border-t border-neutral-900 pt-3 mt-3 space-y-1">
+          <button onClick={onExit} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-neutral-400 hover:bg-neutral-900">
+            <ArrowRight className="w-4 h-4" /> عرض الموقع
+          </button>
+          <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-red-400 hover:bg-red-600/10">
+            <LogOut className="w-4 h-4" /> تسجيل الخروج
+          </button>
+        </div>
+      </aside>
+
+      <div className="flex-1 min-w-0">
+        <div className="md:hidden sticky top-0 z-30 bg-neutral-950 border-b border-neutral-800 px-4 py-3 flex items-center justify-between">
+          <select value={adminTab} onChange={(e) => setAdminTab(e.target.value)}
+            className="bg-neutral-900 border border-neutral-800 rounded-lg px-3 py-2 text-sm">
+            {tabs.map((t) => <option key={t.key} value={t.key}>{t.label}</option>)}
+          </select>
+          <button onClick={onLogout} className="text-red-400 text-sm flex items-center gap-1"><LogOut className="w-4 h-4" /> خروج</button>
+        </div>
+
+        <div className="p-5 sm:p-8 max-w-6xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <h1 className="font-changa font-bold text-2xl">{tabs.find((t) => t.key === adminTab)?.label}</h1>
+            <div className="text-xs text-neutral-500 hidden sm:block">مرحباً، {currentAdmin?.username} · {currentAdmin?.role}</div>
+          </div>
+
+          {adminTab === "dashboard" && <DashboardTab requests={requests} players={players} news={news} />}
+          {adminTab === "requests" && <RequestsTab requests={requests} updateRequestStatus={updateRequestStatus} />}
+          {adminTab === "players" && <PlayersTab players={players} deletePlayer={deletePlayer} updatePlayer={updatePlayer} />}
+          {adminTab === "news" && <NewsTab news={news} saveNewsItem={saveNewsItem} deleteNewsItem={deleteNewsItem} />}
+          {adminTab === "messages" && <MessagesTab messages={messages} />}
+          {adminTab === "settings" && <SettingsTab settings={settings} saveSettings={saveSettings} />}
+          {adminTab === "users" && <UsersTab adminUsers={adminUsers} addAdminUser={addAdminUser} deleteAdminUser={deleteAdminUser} currentAdmin={currentAdmin} />}
+          {adminTab === "log" && <LogTab activityLog={activityLog} />}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function StatCard({ label, value, color = "text-white" }) {
+  return (
+    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-5">
+      <div className="text-xs text-neutral-500 mb-2">{label}</div>
+      <div className={`font-changa font-bold text-3xl ${color}`}>{value}</div>
+    </div>
+  );
+}
+
+function DashboardTab({ requests, players, news }) {
+  const total = requests.length;
+  const accepted = requests.filter((r) => r.status === "مقبول").length;
+  const rejected = requests.filter((r) => r.status === "مرفوض").length;
+  const pending = requests.filter((r) => r.status === "قيد المراجعة").length;
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <StatCard label="إجمالي الطلبات" value={total} />
+      <StatCard label="الطلبات المقبولة" value={accepted} color="text-emerald-400" />
+      <StatCard label="الطلبات المرفوضة" value={rejected} color="text-red-400" />
+      <StatCard label="الطلبات قيد المراجعة" value={pending} color="text-yellow-400" />
+      <StatCard label="عدد اللاعبين" value={players.length} />
+      <StatCard label="عدد الأخبار" value={news.length} />
+    </div>
+  );
+}
+
+function RequestsTab({ requests, updateRequestStatus }) {
+  const [active, setActive] = useState(null);
+  const [note, setNote] = useState("");
+
+  function openDetail(r) { setActive(r); setNote(r.note || ""); }
+
+  return (
+    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden">
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm min-w-[900px]">
+          <thead className="bg-neutral-900 text-neutral-400 text-xs">
+            <tr>
+              {["رقم الطلب", "الاسم", "اللقب", "العمر", "الولاية", "البلدية", "المركز", "المستوى", "الحالة", "إجراءات"].map((h) => (
+                <th key={h} className="px-4 py-3 text-right font-bold whitespace-nowrap">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {requests.map((r) => (
+              <tr key={r.id} className="border-t border-neutral-900 hover:bg-neutral-900/40">
+                <td className="px-4 py-3 whitespace-nowrap font-bold text-red-400">{r.orderNumber}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{r.firstName}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{r.lastName}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{calcAge(r.birthDate)}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{r.wilaya}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{r.baladiya}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{r.position}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{r.level}</td>
+                <td className="px-4 py-3 whitespace-nowrap"><StatusBadge status={r.status} /></td>
+                <td className="px-4 py-3 whitespace-nowrap">
+                  <div className="flex items-center gap-1.5">
+                    <IconBtn title="عرض التفاصيل" onClick={() => openDetail(r)}><Eye className="w-3.5 h-3.5" /></IconBtn>
+                    <IconBtn title="قبول" tone="emerald" onClick={() => updateRequestStatus(r.id, "مقبول")}><Check className="w-3.5 h-3.5" /></IconBtn>
+                    <IconBtn title="رفض" tone="red" onClick={() => updateRequestStatus(r.id, "مرفوض")}><XCircle className="w-3.5 h-3.5" /></IconBtn>
+                    <IconBtn title="قيد المراجعة" tone="yellow" onClick={() => updateRequestStatus(r.id, "قيد المراجعة")}><Clock3 className="w-3.5 h-3.5" /></IconBtn>
+                  </div>
+                </td>
+              </tr>
+            ))}
+            {requests.length === 0 && (
+              <tr><td colSpan={10} className="text-center py-10 text-neutral-500">لا توجد طلبات حتى الآن.</td></tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+
+      {active && (
+        <Modal onClose={() => setActive(null)} title={`تفاصيل الطلب ${active.orderNumber}`}>
+          <div className="grid sm:grid-cols-2 gap-3 text-sm mb-4">
+            <Review label="الاسم" value={active.firstName} />
+            <Review label="اللقب" value={active.lastName} />
+            <Review label="العمر" value={calcAge(active.birthDate)} />
+            <Review label="الهاتف" value={active.phone} />
+            <Review label="الولاية" value={active.wilaya} />
+            <Review label="البلدية" value={active.baladiya} />
+            <Review label="الحي" value={active.hay} />
+            <Review label="المركز" value={active.subPosition ? `${active.position} - ${active.subPosition}` : active.position} />
+            <Review label="المستوى" value={active.level} />
+            <Review label="لعب سابق" value={active.previousClub} />
+          </div>
+          <label className="block mb-4">
+            <span className="block text-sm text-neutral-400 mb-1.5 text-right">إضافة ملاحظة</span>
+            <textarea value={note} onChange={(e) => setNote(e.target.value)} rows={3}
+              className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2.5 text-sm text-right" />
+          </label>
+          <div className="flex gap-2 flex-wrap">
+            <button onClick={() => { updateRequestStatus(active.id, "مقبول", note); setActive(null); }}
+              className="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2.5 rounded-lg text-sm font-bold">قبول</button>
+            <button onClick={() => { updateRequestStatus(active.id, "مرفوض", note); setActive(null); }}
+              className="flex-1 bg-red-600 hover:bg-red-500 py-2.5 rounded-lg text-sm font-bold">رفض</button>
+            <button onClick={() => { updateRequestStatus(active.id, active.status, note); setActive(null); }}
+              className="flex-1 bg-neutral-800 hover:bg-neutral-700 py-2.5 rounded-lg text-sm font-bold">حفظ الملاحظة</button>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+function IconBtn({ children, onClick, title, tone }) {
+  const toneClass = tone === "emerald" ? "hover:bg-emerald-600/20 hover:text-emerald-400"
+    : tone === "red" ? "hover:bg-red-600/20 hover:text-red-400"
+    : tone === "yellow" ? "hover:bg-yellow-600/20 hover:text-yellow-400"
+    : "hover:bg-neutral-700";
+  return (
+    <button title={title} onClick={onClick} className={`w-7 h-7 rounded-md bg-neutral-900 flex items-center justify-center text-neutral-400 transition ${toneClass}`}>
+      {children}
+    </button>
+  );
+}
+
+function Modal({ title, children, onClose }) {
+  return (
+    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4" onClick={onClose}>
+      <div dir="rtl" onClick={(e) => e.stopPropagation()} className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 w-full max-w-lg max-h-[85vh] overflow-y-auto">
+        <div className="flex items-center justify-between mb-5">
+          <h3 className="font-changa font-bold text-lg">{title}</h3>
+          <button onClick={onClose} className="text-neutral-500 hover:text-white"><X className="w-5 h-5" /></button>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function PlayersTab({ players, deletePlayer, updatePlayer }) {
+  const [editing, setEditing] = useState(null);
+  const [viewing, setViewing] = useState(null);
+
+  return (
+    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden">
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm min-w-[800px]">
+          <thead className="bg-neutral-900 text-neutral-400 text-xs">
+            <tr>
+              {["الاسم", "اللقب", "العمر", "المركز", "المستوى", "الولاية", "إجراءات"].map((h) => (
+                <th key={h} className="px-4 py-3 text-right font-bold whitespace-nowrap">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {players.map((p) => (
+              <tr key={p.id} className="border-t border-neutral-900 hover:bg-neutral-900/40">
+                <td className="px-4 py-3 whitespace-nowrap">{p.firstName}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{p.lastName}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{calcAge(p.birthDate)}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{p.position}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{p.level}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{p.wilaya}</td>
+                <td className="px-4 py-3 whitespace-nowrap">
+                  <div className="flex items-center gap-1.5">
+                    <IconBtn title="عرض" onClick={() => setViewing(p)}><Eye className="w-3.5 h-3.5" /></IconBtn>
+                    <IconBtn title="تعديل" onClick={() => setEditing({ ...p })}><Pencil className="w-3.5 h-3.5" /></IconBtn>
+                    <IconBtn title="حذف" tone="red" onClick={() => { if (confirm("تأكيد حذف اللاعب؟")) deletePlayer(p.id); }}><Trash2 className="w-3.5 h-3.5" /></IconBtn>
+                  </div>
+                </td>
+              </tr>
+            ))}
+            {players.length === 0 && <tr><td colSpan={7} className="text-center py-10 text-neutral-500">لا يوجد لاعبون بعد. يتم إضافتهم تلقائياً عند قبول الطلب.</td></tr>}
+          </tbody>
+        </table>
+      </div>
+
+      {viewing && (
+        <Modal title={`${viewing.firstName} ${viewing.lastName}`} onClose={() => setViewing(null)}>
+          <div className="grid sm:grid-cols-2 gap-3 text-sm">
+            <Review label="العمر" value={calcAge(viewing.birthDate)} />
+            <Review label="الهاتف" value={viewing.phone} />
+            <Review label="المركز" value={viewing.subPosition ? `${viewing.position} - ${viewing.subPosition}` : viewing.position} />
+            <Review label="المستوى" value={viewing.level} />
+            <Review label="الولاية" value={viewing.wilaya} />
+          </div>
+        </Modal>
+      )}
+
+      {editing && (
+        <Modal title="تعديل بيانات اللاعب" onClose={() => setEditing(null)}>
+          <div className="space-y-4">
+            <Field label="الاسم" value={editing.firstName} onChange={(v) => setEditing({ ...editing, firstName: v })} />
+            <Field label="اللقب" value={editing.lastName} onChange={(v) => setEditing({ ...editing, lastName: v })} />
+            <SelectField label="المستوى" value={editing.level} onChange={(v) => setEditing({ ...editing, level: v })} options={LEVELS} />
+            <button onClick={() => { updatePlayer(editing.id, editing); setEditing(null); }}
+              className="w-full bg-red-600 hover:bg-red-500 py-2.5 rounded-lg text-sm font-bold">حفظ التعديلات</button>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+function NewsTab({ news, saveNewsItem, deleteNewsItem }) {
+  const [editing, setEditing] = useState(null);
+
+  return (
+    <div>
+      <div className="flex justify-end mb-4">
+        <button onClick={() => setEditing({ title: "", description: "", image: "", date: new Date().toISOString().slice(0, 10) })}
+          className="flex items-center gap-2 bg-red-600 hover:bg-red-500 px-4 py-2.5 rounded-lg text-sm font-bold">
+          <Plus className="w-4 h-4" /> إضافة خبر جديد
+        </button>
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {news.map((n) => (
+          <div key={n.id} className="bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden">
+            <div className="aspect-[3/2] bg-neutral-900"><img src={n.image} alt="" className="w-full h-full object-cover" /></div>
+            <div className="p-4">
+              <div className="text-xs text-neutral-500 mb-1">{formatDate(n.date)}</div>
+              <div className="font-bold mb-2 line-clamp-1">{n.title}</div>
+              <div className="flex gap-2">
+                <button onClick={() => setEditing({ ...n })} className="flex-1 bg-neutral-800 hover:bg-neutral-700 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1"><Pencil className="w-3 h-3" /> تعديل</button>
+                <button onClick={() => { if (confirm("تأكيد حذف الخبر؟")) deleteNewsItem(n.id); }} className="flex-1 bg-red-600/20 text-red-400 hover:bg-red-600/30 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1"><Trash2 className="w-3 h-3" /> حذف</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {editing && (
+        <Modal title={editing.id ? "تعديل الخبر" : "إضافة خبر جديد"} onClose={() => setEditing(null)}>
+          <div className="space-y-4">
+            <Field label="العنوان" value={editing.title} onChange={(v) => setEditing({ ...editing, title: v })} />
+            <label className="block">
+              <span className="block text-sm text-neutral-400 mb-1.5 text-right">الوصف</span>
+              <textarea value={editing.description} onChange={(e) => setEditing({ ...editing, description: e.target.value })} rows={4}
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2.5 text-sm text-right" />
+            </label>
+            <Field label="رابط الصورة" value={editing.image} onChange={(v) => setEditing({ ...editing, image: v })} />
+            <Field type="date" label="التاريخ" value={editing.date} onChange={(v) => setEditing({ ...editing, date: v })} />
+            <button onClick={() => { saveNewsItem(editing); setEditing(null); }}
+              className="w-full bg-red-600 hover:bg-red-500 py-2.5 rounded-lg text-sm font-bold">حفظ الخبر</button>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+function MessagesTab({ messages }) {
+  return (
+    <div className="space-y-3">
+      {messages.map((m) => (
+        <div key={m.id} className="bg-neutral-950 border border-neutral-800 rounded-2xl p-5">
+          <div className="flex items-center justify-between mb-2">
+            <span className="font-bold">{m.name}</span>
+            <span className="text-xs text-neutral-500">{formatDate(m.date)}</span>
+          </div>
+          <div className="text-xs text-neutral-500 mb-2">{m.contact}</div>
+          <p className="text-sm text-neutral-300">{m.message}</p>
+        </div>
+      ))}
+      {messages.length === 0 && <div className="text-center text-neutral-500 py-16">لا توجد رسائل حالياً.</div>}
+    </div>
+  );
+}
+
+function SettingsTab({ settings, saveSettings }) {
+  const [s, setS] = useState(settings);
+  function set(k, v) { setS((f) => ({ ...f, [k]: v })); }
+  return (
+    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 max-w-2xl space-y-5">
+      <Field label="اسم النادي (عربي)" value={s.clubNameAr} onChange={(v) => set("clubNameAr", v)} />
+      <Field label="اسم النادي (إنجليزي)" value={s.clubNameEn} onChange={(v) => set("clubNameEn", v)} />
+      <Field label="الشعار النصي (Motto)" value={s.motto} onChange={(v) => set("motto", v)} />
+      <Field label="رابط شعار النادي (Logo URL)" value={s.logo} onChange={(v) => set("logo", v)} />
+      <Field label="رابط صورة الغلاف (Cover URL)" value={s.cover} onChange={(v) => set("cover", v)} />
+      <div className="grid grid-cols-2 gap-4">
+        <label className="block">
+          <span className="block text-sm text-neutral-400 mb-1.5">اللون الأساسي</span>
+          <input type="color" value={s.primaryColor} onChange={(e) => set("primaryColor", e.target.value)} className="w-full h-10 bg-neutral-900 border border-neutral-800 rounded-lg" />
+        </label>
+        <label className="block">
+          <span className="block text-sm text-neutral-400 mb-1.5">لون الذهبي</span>
+          <input type="color" value={s.goldColor} onChange={(e) => set("goldColor", e.target.value)} className="w-full h-10 bg-neutral-900 border border-neutral-800 rounded-lg" />
+        </label>
+      </div>
+      <Field label="رقم الهاتف" value={s.phone} onChange={(v) => set("phone", v)} />
+      <Field label="البريد الإلكتروني" value={s.email} onChange={(v) => set("email", v)} />
+      <Field label="فيسبوك" value={s.facebook} onChange={(v) => set("facebook", v)} />
+      <Field label="إنستغرام" value={s.instagram} onChange={(v) => set("instagram", v)} />
+      <Field label="تويتر" value={s.twitter} onChange={(v) => set("twitter", v)} />
+      <div>
+        <span className="block text-sm text-neutral-400 mb-2">اللغات المفعّلة</span>
+        <div className="flex gap-4">
+          {["العربية", "الإنجليزية", "الفرنسية"].map((lang) => (
+            <label key={lang} className="flex items-center gap-2 text-sm">
+              <input type="checkbox" checked={s.languages.includes(lang)}
+                onChange={(e) => {
+                  const langs = e.target.checked ? [...s.languages, lang] : s.languages.filter((l) => l !== lang);
+                  set("languages", langs);
+                }} />
+              {lang}
+            </label>
+          ))}
+        </div>
+      </div>
+      <button onClick={() => saveSettings(s)} className="w-full bg-red-600 hover:bg-red-500 py-3 rounded-lg text-sm font-bold">حفظ الإعدادات</button>
+    </div>
+  );
+}
+
+function UsersTab({ adminUsers, addAdminUser, deleteAdminUser, currentAdmin }) {
+  const [form, setForm] = useState({ username: "", password: "", role: "مشرف" });
+  function set(k, v) { setForm((f) => ({ ...f, [k]: v })); }
+  function submit() {
+    if (!form.username || !form.password) return;
+    if (adminUsers.some((u) => u.username === form.username)) return alert("اسم المستخدم موجود مسبقاً");
+    addAdminUser(form);
+    setForm({ username: "", password: "", role: "مشرف" });
+  }
+  return (
+    <div className="grid lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden">
+        <table className="w-full text-sm">
+          <thead className="bg-neutral-900 text-neutral-400 text-xs">
+            <tr>
+              <th className="px-4 py-3 text-right">اسم المستخدم</th>
+              <th className="px-4 py-3 text-right">الدور</th>
+              <th className="px-4 py-3 text-right">إجراءات</th>
+            </tr>
+          </thead>
+          <tbody>
+            {adminUsers.map((u) => (
+              <tr key={u.username} className="border-t border-neutral-900">
+                <td className="px-4 py-3 font-bold">{u.username} {u.username === currentAdmin?.username && <span className="text-xs text-neutral-500">(أنت)</span>}</td>
+                <td className="px-4 py-3">{u.role}</td>
+                <td className="px-4 py-3">
+                  <IconBtn title="حذف" tone="red" onClick={() => deleteAdminUser(u.username)}><Trash2 className="w-3.5 h-3.5" /></IconBtn>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="bg-neutral-950 border border-neutral-800 rounded-2xl p-5 space-y-4 h-fit">
+        <h3 className="font-changa font-bold">إنشاء مستخدم جديد</h3>
+        <Field label="اسم المستخدم" value={form.username} onChange={(v) => set("username", v)} />
+        <Field type="password" label="كلمة المرور" value={form.password} onChange={(v) => set("password", v)} />
+        <SelectField label="الدور" value={form.role} onChange={(v) => set("role", v)} options={["مدير عام", "مشرف", "محرر أخبار"]} />
+        <button onClick={submit} className="w-full bg-red-600 hover:bg-red-500 py-2.5 rounded-lg text-sm font-bold">إنشاء المستخدم</button>
+      </div>
+    </div>
+  );
+}
+
+function LogTab({ activityLog }) {
+  return (
+    <div className="bg-neutral-950 border border-neutral-800 rounded-2xl divide-y divide-neutral-900">
+      {activityLog.map((l) => (
+        <div key={l.id} className="px-5 py-3 flex items-center justify-between text-sm">
+          <div className="flex items-center gap-2">
+            <Activity className="w-3.5 h-3.5 text-red-500 shrink-0" />
+            <span>{l.action}</span>
+          </div>
+          <div className="text-xs text-neutral-500 flex items-center gap-2 shrink-0">
+            <span>{l.actor}</span>
+            <span>{new Date(l.at).toLocaleString("ar-DZ")}</span>
+          </div>
+        </div>
+      ))}
+      {activityLog.length === 0 && <div className="text-center text-neutral-500 py-16">لا يوجد نشاط مسجل بعد.</div>}
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------
+   أنماط عامة وحركات
+--------------------------------------------------------- */
+function GlobalStyle() {
+  return (
+    <style>{`
+      @import url('https://fonts.googleapis.com/css2?family=Changa:wght@500;600;700;800&family=Almarai:wght@400;700;800&display=swap');
+      .font-changa { font-family: 'Changa', sans-serif; }
+      .font-almarai { font-family: 'Almarai', sans-serif; }
+
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(16px);} to { opacity: 1; transform: translateY(0);} }
+      .animate-fadeUp { animation: fadeUp .7s ease both; }
+
+      @keyframes glow { 0%,100% { opacity: .45; transform: scale(1);} 50% { opacity: .8; transform: scale(1.12);} }
+      .animate-glow { animation: glow 3.2s ease-in-out infinite; }
+
+      @keyframes drift1 { 0% { transform: translate(0,0);} 50% { transform: translate(40px,-30px);} 100% { transform: translate(0,0);} }
+      @keyframes drift2 { 0% { transform: translate(0,0);} 50% { transform: translate(-50px,20px);} 100% { transform: translate(0,0);} }
+      .animate-drift1 { animation: drift1 14s ease-in-out infinite; }
+      .animate-drift2 { animation: drift2 18s ease-in-out infinite; }
+
+      @keyframes toast { from { opacity:0; transform: translate(-50%,10px);} to { opacity:1; transform: translate(-50%,0);} }
+      .animate-toast { animation: toast .25s ease both; }
+
+      ::selection { background: #c8102e; color: white; }
+      input:focus, select:focus, textarea:focus { outline: none; }
+      table { border-collapse: collapse; }
+    `}</style>
+  );
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>
